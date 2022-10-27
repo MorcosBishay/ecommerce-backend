@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 
 connectToDb();
 
-app.use("/product", routes);
+app.use("/products", routes);
 
 // send back a 404 error for any unknown api request
 app.use((req, res, next) => {

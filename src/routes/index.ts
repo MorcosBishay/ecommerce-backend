@@ -7,7 +7,7 @@ import vegetableRoute from "./VegetableRoute";
 const router: Router = express.Router();
 
 router.use("/electronics", electronicsRoute);
-router.use("/fruit", fruitRoute);
-router.use("/vegetable", vegetableRoute);
+router.use("/fruits", fruitRoute);
+router.use("/vegetables", vegetableRoute);
 
 export default router;
