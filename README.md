@@ -74,4 +74,6 @@ Developed using express, node, typescript & OOP, which includes sorting & pagina
 
 ```
 
+**Link for the frontend repo, which consumes this backend APIs [https://github.com/MorcosBishay/ecommerce-frontend](https://github.com/MorcosBishay/ecommerce-frontend)**
+
 
