@@ -8,7 +8,7 @@ Developed using express, node, typescript & OOP, which includes sorting & pagina
 
 ***Create .env file in the project root directory, copy the .env.example content in the .env file & add your keys*** 
 
-***Go to the root directory of the project, open your terminal & run the following commands in oreder**
+***Go to the root directory of the project, open your terminal & run the following commands in order**
 ```
 1- npm install
 
