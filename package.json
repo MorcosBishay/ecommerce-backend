@@ -13,6 +13,9 @@
     "prettier": "prettier --check **/*.ts",
     "prettier:fix": "prettier --write **/*.ts"
   },
+  "engines": {
+    "node": "18.11.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
