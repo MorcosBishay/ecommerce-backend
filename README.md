@@ -1,6 +1,8 @@
 # ecommerce-backend
 
-This is the backend for e-commerce website, which is developed using express, node, typescript & OOP, and also includes sorting & pagination.
+This is the backend for e-commerce website. 
+
+Developed using express, node, typescript & OOP, which includes sorting & pagination.
 
 ## Usage
 
