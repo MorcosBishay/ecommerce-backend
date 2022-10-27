@@ -26,13 +26,12 @@ This is the backend for e-commerce website, which is developed using express, no
 
 ## Live links depolyed on heroku for the APIs
 
-```
-1- electronics => https://floating-lake-77552.herokuapp.com/products/electronics?limit=9&page=1&sort=name
+1- electronics => [https://floating-lake-77552.herokuapp.com/products/electronics?limit=9&page=1&sort=name](https://floating-lake-77552.herokuapp.com/products/electronics?limit=9&page=1&sort=name)
 
-2- fruits => https://floating-lake-77552.herokuapp.com/products/fruits?limit=2&page=1&sort=-name
+2- fruits => [https://floating-lake-77552.herokuapp.com/products/fruits?limit=2&page=1&sort=-name](https://floating-lake-77552.herokuapp.com/products/fruits?limit=2&page=1&sort=-name)
 
-3- vegetables => https://floating-lake-77552.herokuapp.com/products/vegetables?limit=4&page=1&sort=-price
-```
+3- vegetables => [https://floating-lake-77552.herokuapp.com/products/vegetables?limit=4&page=1&sort=-price](https://floating-lake-77552.herokuapp.com/products/vegetables?limit=4&page=1&sort=-price)
+
 
 
 
