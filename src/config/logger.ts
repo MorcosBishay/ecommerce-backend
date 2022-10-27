@@ -1,7 +1,7 @@
-import winston from "winston";
-import morgan, { StreamOptions } from "morgan";
+import winston from 'winston';
+import morgan, { StreamOptions } from 'morgan';
 
-import { LoggerResponse, LoggerInterface } from "../types/config";
+import { LoggerResponse, LoggerInterface } from '../types/config';
 
 const enumerateErrorFormat = winston.format((info) => {
   if (info instanceof Error) Object.assign(info, { message: info.stack });
@@ -9,28 +9,28 @@ const enumerateErrorFormat = winston.format((info) => {
 });
 
 const logger: LoggerInterface = winston.createLogger({
-  level: "debug",
+  level: 'debug',
   format: winston.format.combine(
     enumerateErrorFormat(),
     winston.format.colorize(),
     winston.format.splat(),
-    winston.format.printf(({ level, message }) => `${level}: ${message}`)
+    winston.format.printf(({ level, message }) => `${level}: ${message}`),
   ),
   transports: [
-    new winston.transports.File({ filename: "logs/error.log", level: "error" }),
-    new winston.transports.File({ filename: "logs/combined.log" }),
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'logs/combined.log' }),
     new winston.transports.Console({
-      stderrLevels: ["error"],
+      stderrLevels: ['error'],
     }),
   ],
 });
 
 morgan.token(
-  "message",
-  (req: any, res: LoggerResponse): string => res.locals.errorMessage || ""
+  'message',
+  (req: any, res: LoggerResponse): string => res.locals.errorMessage || '',
 );
 
-const getIpFormat = () => "";
+const getIpFormat = () => '';
 const successResponseFormat = `${getIpFormat()}:method :url :status - :response-time ms`;
 const errorResponseFormat = `${getIpFormat()}:method :url :status - :response-time ms - message: :message`;
 

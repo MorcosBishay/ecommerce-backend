@@ -1,7 +1,7 @@
-import { Schema, model } from "mongoose";
-import mongooseLeanVirtuals from "mongoose-lean-virtuals";
+import { Schema, model } from 'mongoose';
+import mongooseLeanVirtuals from 'mongoose-lean-virtuals';
 
-import { IFruit } from "../types";
+import { IFruit } from '../types';
 
 const fruitsSchema: Schema = new Schema<IFruit>({
   name: {
@@ -22,4 +22,4 @@ fruitsSchema.plugin(mongooseLeanVirtuals);
 /**
  * @typedef Skill
  */
-export default model<IFruit>("Fruit", fruitsSchema);
+export default model<IFruit>('Fruit', fruitsSchema);

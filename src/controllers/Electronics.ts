@@ -1,8 +1,8 @@
-import { ElectronicsService } from "../services";
-import { Electronics } from "../models";
-import { IElectronics } from "../types";
+import { ElectronicsService } from '../services';
+import { Electronics } from '../models';
+import { IElectronics } from '../types';
 
-import Controller from "./Controller";
+import Controller from './Controller';
 
 const electronicsService = new ElectronicsService(Electronics);
 

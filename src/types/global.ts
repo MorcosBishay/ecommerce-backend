@@ -1,11 +1,5 @@
-import { Request } from "express";
-import {
-  Aggregate,
-  Document,
-  ObjectId,
-  ConnectOptions,
-  PopulateOptions,
-} from "mongoose";
+import { Request } from 'express';
+import { Document, ObjectId, ConnectOptions, PopulateOptions } from 'mongoose';
 
 export interface RequestInterface extends Request {
   body: any;

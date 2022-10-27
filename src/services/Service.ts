@@ -1,6 +1,7 @@
-import { Document, FilterQuery, Model as MongooseModel } from "mongoose";
-import autoBind from "auto-bind";
-import { ServiceOptions, Documents } from "../types/global";
+import { Document, FilterQuery, Model as MongooseModel } from 'mongoose';
+import autoBind from 'auto-bind';
+
+import { ServiceOptions, Documents } from '../types/global';
 
 export default class Service<IModel extends Document> {
   model: MongooseModel<IModel>;
@@ -22,10 +23,10 @@ export default class Service<IModel extends Document> {
    */
   async getAllWithPagination(
     filter: FilterQuery<IModel>,
-    options: ServiceOptions = {}
+    options: ServiceOptions = {},
   ): Promise<Documents<IModel>> {
     const Model = this.model;
-    if (filter?.search) {
+    if (filter.search) {
       filter.$text = { $search: filter.search };
       delete filter.search;
     }
@@ -36,7 +37,7 @@ export default class Service<IModel extends Document> {
     const documents: IModel[] = await Model.find(filter)
       .populate(options.populate)
       .select(options.select)
-      .sort(options?.sort)
+      .sort(options.sort)
       .skip(skippedValue)
       .limit(parseInt(`${options.limit}`, 10))
       .lean({ virtuals: true });
@@ -65,10 +66,10 @@ export default class Service<IModel extends Document> {
    */
   async getAll(
     filter: FilterQuery<IModel> = {},
-    options: ServiceOptions = { sort: "", limit: 0, page: 0 }
+    options: ServiceOptions = { sort: '', limit: 0, page: 0 },
   ): Promise<Documents<IModel>> {
     const Model = this.model;
-    if (filter?.search) {
+    if (filter.search) {
       filter.$text = { $search: filter.search };
       delete filter.search;
     }

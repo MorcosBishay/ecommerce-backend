@@ -1,8 +1,8 @@
-import { FruitService } from "../services";
-import { Fruit } from "../models";
-import { IFruit } from "../types";
+import { FruitService } from '../services';
+import { Fruit } from '../models';
+import { IFruit } from '../types';
 
-import Controller from "./Controller";
+import Controller from './Controller';
 
 const fruitService = new FruitService(Fruit);
 

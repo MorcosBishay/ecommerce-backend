@@ -1,6 +1,6 @@
-import Joi from "joi";
+import Joi from 'joi';
 
-import { IJoiSchema } from "../types/joi.interface";
+import { IJoiSchema } from '../types/joi.interface';
 
 const getVegetablesWithPagination: IJoiSchema = {
   query: Joi.object().keys({

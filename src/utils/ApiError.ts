@@ -8,7 +8,7 @@ export default class ApiError extends Error {
     statusCode: number,
     message: string,
     data: object = {},
-    stack = ""
+    stack = '',
   ) {
     super(message);
     this.statusCode = statusCode;

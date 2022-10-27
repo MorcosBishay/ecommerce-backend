@@ -1,17 +1,17 @@
-import express, { Router } from "express";
-import asyncHandler from "express-async-handler";
+import express, { Router } from 'express';
+import asyncHandler from 'express-async-handler';
 
-import { VegetableController } from "../controllers";
-import validate from "../middlewares/validate";
-import { getVegetablesWithPagination } from "../validations";
+import { VegetableController } from '../controllers';
+import validate from '../middlewares/validate';
+import { getVegetablesWithPagination } from '../validations';
 
 const router: Router = express.Router();
 
 router
-  .route("/")
+  .route('/')
   .get(
     validate(getVegetablesWithPagination),
-    asyncHandler(VegetableController.getAllWithPagination)
+    asyncHandler(VegetableController.getAllWithPagination),
   );
 
 export default router;

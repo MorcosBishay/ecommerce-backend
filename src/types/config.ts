@@ -1,6 +1,6 @@
-import { ServerResponse } from "http";
+import { ServerResponse } from 'http';
 
-import winston from "winston";
+import winston from 'winston';
 
 export interface LoggerInterface extends winston.Logger {
   successHandler?: CallableFunction;

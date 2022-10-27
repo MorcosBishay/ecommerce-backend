@@ -1,0 +1,17 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@shopify/typescript",
+    "plugin:@shopify/typescript-type-checking",
+    "plugin:@shopify/prettier",
+    "prettier"
+  ],
+  "parserOptions": { "project": "tsconfig.json" },
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-process-env": "off",
+    "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/unbound-method": "off"
+  }
+}
